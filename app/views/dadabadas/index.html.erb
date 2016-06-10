@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dadabadas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alphanu</th>
+      <th>Numbers</th>
+      <th>Floats</th>
+      <th>Files</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dadabadas.each do |dadabada| %>
+      <tr>
+        <td><%= dadabada.alphanu %></td>
+        <td><%= dadabada.numbers %></td>
+        <td><%= dadabada.floats %></td>
+        <td><%= dadabada.files %></td>
+        <td><%= link_to 'Show', dadabada %></td>
+        <td><%= link_to 'Edit', edit_dadabada_path(dadabada) %></td>
+        <td><%= link_to 'Destroy', dadabada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dadabada', new_dadabada_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alphanu: MyString
+  numbers: 1
+  floats: 9.99
+  files: 
+
+two:
+  alphanu: MyString
+  numbers: 1
+  floats: 9.99
+  files: 

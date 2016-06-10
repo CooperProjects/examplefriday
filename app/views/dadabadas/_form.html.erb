@@ -1,0 +1,33 @@
+<%= form_for(@dadabada) do |f| %>
+  <% if @dadabada.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dadabada.errors.count, "error") %> prohibited this dadabada from being saved:</h2>
+
+      <ul>
+      <% @dadabada.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :alphanu %><br>
+    <%= f.text_field :alphanu %>
+  </div>
+  <div class="field">
+    <%= f.label :numbers %><br>
+    <%= f.number_field :numbers %>
+  </div>
+  <div class="field">
+    <%= f.label :floats %><br>
+    <%= f.text_field :floats %>
+  </div>
+  <div class="field">
+    <%= f.label :files %><br>
+    <%= f.text_field :files %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
